@@ -13,4 +13,4 @@ WORKDIR /usr/src/app
 RUN npm install serve -g
 COPY --from=build /usr/src/app/dist ./dist
 USER node
-CMD ["serve", "--single", "--port", "8080", "dist"]
+CMD ["serve", "--single", "-l", "8080", "dist"]
